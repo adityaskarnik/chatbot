@@ -24,25 +24,25 @@ responses:
     text: Hey! How are you? I can help you with information on Restaurants
   utter_restaurants_pune:
   - buttons:
-    - payload: Provide me information on Le Plaisir
+    - payload: Provide me Menu of Le Plaisir
       title: Le Plaisir
     image: https://www.panchshil.com/admin/uploads/blogImages/5b921aaea3dbc.jpg
     text: Restaurants in Pune
   utter_restaurants_bangalore:
   - buttons:
-    - payload: Provide me information on EAT.FIT
+    - payload: Provide me Menu of EAT.FIT
       title: EAT.FIT
-    - payload: Provide me information on NANDHINI DELUXE
-      title: NANDHINI DELUXE
+    - payload: Provide me Menu of NANDHINI DELUX
+      title: NANDHINI DELUX
     image: https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRon1yMp0OmBt-4kaGtGyZHSKaFjiBlimeG0_YSf6tbvIlB2BR&usqp=CAU
     text: Restaurants in Bangalore
   utter_restaurants_mumbai:
   - buttons:
-    - payload: Provide me information on Theobroma
+    - payload: Provide me Menu of Theobroma
       title: Theobroma
-    - payload: Provide me information on Guru Kripa
+    - payload: Provide me Menu of Guru Kripa
       title: Guru Kripa
-    - payload: Provide me information on Cafe Safar
+    - payload: Provide me Menu of Cafe Safar
       title: Cafe Safar
     image: https://i.ytimg.com/vi/Dxkn7GtucRA/maxresdefault.jpg
     text: Restaurants in Mumbai

@@ -7,12 +7,12 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
+from typing import Any, Text, Dict, List
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+import sqlite3
+
 class FetchMumbaiRestaurants(Action):
 
     def name(self) -> Text:
@@ -22,9 +22,15 @@ class FetchMumbaiRestaurants(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Hello World!")
+            restaurant = str((tracker.latest_message)['text']).split("Provide me Menu of")[1].strip()
+            import sqlite3
+            conn = sqlite3.connect('hotel_conn.db')
+            data = conn.execute("SELECT FOOD_ITEM, PRICE FROM HOTEL_INFO WHERE RESTAURANTS='" + restaurant +"'")
+            print("DATA",data, type(data))
+            for i in data:
+                dispatcher.utter_message(text=str(i))
 
-        return []
+            return []
 
 class FetchPuneRestaurants(Action):
 
@@ -35,9 +41,15 @@ class FetchPuneRestaurants(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Hello World!")
+            restaurant = str((tracker.latest_message)['text']).split("Provide me Menu of")[1].strip()
+            import sqlite3
+            conn = sqlite3.connect('hotel_conn.db')
+            data = conn.execute("SELECT FOOD_ITEM, PRICE FROM HOTEL_INFO WHERE RESTAURANTS='" + restaurant +"'")
+            print("DATA",data, type(data))
+            for i in data:
+                dispatcher.utter_message(text=str(i))
 
-        return []
+            return []
 
 class FetchBangaloreRestaurants(Action):
 
@@ -47,10 +59,12 @@ class FetchBangaloreRestaurants(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-        conn = sqlite3.connect('hotel_conn.db')
-        data = conn.execute("SELECT * FROM HOTEL_INFO WHERE CITY = 'BANGALORE'")
+            restaurant = str((tracker.latest_message)['text']).split("Provide me Menu of")[1].strip()
+            import sqlite3
+            conn = sqlite3.connect('hotel_conn.db')
+            data = conn.execute("SELECT FOOD_ITEM, PRICE FROM HOTEL_INFO WHERE RESTAURANTS='" + restaurant +"'")
+            print("DATA",data, type(data))
+            for i in data:
+                dispatcher.utter_message(text=str(i))
 
-        dispatcher.utter_message(text=data)
-
-        return []
+            return []

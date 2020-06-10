@@ -57,16 +57,16 @@
 - am I talking to a human?
 
 ## intent:provide_mumbai_restaurants
-- Provide me information on Theobroma
-- Provide me information on Guru Kripa
-- Provide me information on Cafe Safar
+- Provide me Menu of Theobroma
+- Provide me Menu of Guru Kripa
+- Provide me Menu of Cafe Safar
 - Provide me the Restaurants in Mumbai
 
 ## intent:provide_pune_restaurants
-- Provide me information on Le Plaisir
+- Provide me Menu of Le Plaisir
 - Provide me the Restaurants in Pune
 
 ## intent:provide_bangalore_restaurants
-- Provide me information on EAT.FIT
-- Provide me information on NANDHINI DELUXE
+- Provide me Menu of EAT.FIT
+- Provide me Menu of NANDHINI DELUX
 - Provide me the Restaurants in Bangalore
