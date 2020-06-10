@@ -8,7 +8,7 @@ Next, activate virtual environment
 source venv/bin/activate # For Linux
 ```
 ```
-.\venv\Script\activate # For Windows
+.\venv\Scripts\activate # For Windows
 ```
 Install rasa
 ```
