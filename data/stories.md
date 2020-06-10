@@ -1,31 +1,59 @@
-## happy path
+## Bangalore Story
+
 * greet
-  - utter_greet
-* mood_great
-  - utter_happy
+    - utter_greet
+* provide_bangalore_restaurants
+    - utter_restaurants_bangalore
+* provide_bangalore_restaurants
+    - fetch_bangalore_restaurants
+    - utter_did_that_help
 
-## sad path 1
+## Pune Story
+
 * greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* affirm
-  - utter_happy
+    - utter_greet
+* provide_pune_restaurants
+    - utter_restaurants_pune
+* provide_pune_restaurants
+    - fetch_pune_restaurants
+    - utter_did_that_help
 
-## sad path 2
+## Bangalore Story
+
 * greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* deny
-  - utter_goodbye
+    - utter_greet
+* provide_bangalore_restaurants
+    - utter_restaurants_bangalore
+* provide_bangalore_restaurants
+    - fetch_bangalore_restaurants
+    - utter_did_that_help
 
-## say goodbye
-* goodbye
-  - utter_goodbye
+## Mumbai Story
 
-## bot challenge
-* bot_challenge
-  - utter_iamabot
+* greet
+    - utter_greet
+* provide_mumbai_restaurants
+    - utter_restaurants_mumbai
+* provide_mumbai_restaurants
+    - fetch_mumbai_restaurants
+    - utter_did_that_help
+
+## Pune Story
+
+* greet
+    - utter_greet
+* provide_pune_restaurants
+    - utter_restaurants_pune
+* provide_pune_restaurants
+    - fetch_pune_restaurants
+    - utter_did_that_help
+
+## Mumbai Story
+
+* greet
+    - utter_greet
+* provide_mumbai_restaurants
+    - utter_restaurants_mumbai
+* provide_mumbai_restaurants
+    - fetch_mumbai_restaurants
+    - utter_did_that_help

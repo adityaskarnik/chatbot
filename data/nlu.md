@@ -5,6 +5,7 @@
 - good morning
 - good evening
 - hey there
+- Hi
 
 ## intent:goodbye
 - bye
@@ -54,3 +55,18 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+## intent:provide_mumbai_restaurants
+- Provide me information on Theobroma
+- Provide me information on Guru Kripa
+- Provide me information on Cafe Safar
+- Provide me the Restaurants in Mumbai
+
+## intent:provide_pune_restaurants
+- Provide me information on Le Plaisir
+- Provide me the Restaurants in Pune
+
+## intent:provide_bangalore_restaurants
+- Provide me information on EAT.FIT
+- Provide me information on NANDHINI DELUXE
+- Provide me the Restaurants in Bangalore

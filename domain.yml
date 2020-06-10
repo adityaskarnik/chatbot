@@ -9,40 +9,43 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
+- provide_mumbai_restaurants
+- provide_bangalore_restaurants
+- provide_pune_restaurants
 responses:
   utter_greet:
-  - text: Hey! How are you? I can help you with information on Restaurants
-    buttons:
-    - title: Restaurants in Mumbai
-      payload: Provide me the Restaurants in Mumbai
-    - title: Restaurants in Bangalore
-      payload: Provide me the Restaurants in Bangalore
-    - title: Restaurants in Pune
-      payload: Provide me the Restaurants in Pune
+  - buttons:
+    - payload: Provide me the Restaurants in Mumbai
+      title: Restaurants in Mumbai
+    - payload: Provide me the Restaurants in Bangalore
+      title: Restaurants in Bangalore
+    - payload: Provide me the Restaurants in Pune
+      title: Restaurants in Pune
+    text: Hey! How are you? I can help you with information on Restaurants
   utter_restaurants_pune:
-  - image: https://www.panchshil.com/admin/uploads/blogImages/5b921aaea3dbc.jpg
-    text: 'Restaurants in Pune'
-    buttons:
-    - title: Le Plaisir
-      payload: Provide me information on Le Plaisir
+  - buttons:
+    - payload: Provide me information on Le Plaisir
+      title: Le Plaisir
+    image: https://www.panchshil.com/admin/uploads/blogImages/5b921aaea3dbc.jpg
+    text: Restaurants in Pune
   utter_restaurants_bangalore:
-  - image: https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRon1yMp0OmBt-4kaGtGyZHSKaFjiBlimeG0_YSf6tbvIlB2BR&usqp=CAU
-    text: 'Restaurants in Bangalore'
-    buttons:
-    - title: EAT.FIT
-      payload: Provide me information on EAT.FIT
-    - title: NANDHINI DELUXE
-      payload: Provide me information on NANDHINI DELUXE
+  - buttons:
+    - payload: Provide me information on EAT.FIT
+      title: EAT.FIT
+    - payload: Provide me information on NANDHINI DELUXE
+      title: NANDHINI DELUXE
+    image: https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRon1yMp0OmBt-4kaGtGyZHSKaFjiBlimeG0_YSf6tbvIlB2BR&usqp=CAU
+    text: Restaurants in Bangalore
   utter_restaurants_mumbai:
-  - image: https://i.ytimg.com/vi/Dxkn7GtucRA/maxresdefault.jpg
-    text: 'Restaurants in Mumbai'
-    buttons:
-    - title: Theobroma
-      payload: Provide me information on Theobroma
-    - title: Guru Kripa
-      payload: Provide me information on Guru Kripa
-    - title:  Cafe Safar
-      payload: Provide me information on Cafe Safar
+  - buttons:
+    - payload: Provide me information on Theobroma
+      title: Theobroma
+    - payload: Provide me information on Guru Kripa
+      title: Guru Kripa
+    - payload: Provide me information on Cafe Safar
+      title: Cafe Safar
+    image: https://i.ytimg.com/vi/Dxkn7GtucRA/maxresdefault.jpg
+    text: Restaurants in Mumbai
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
@@ -58,3 +61,9 @@ actions:
 - utter_happy
 - utter_goodbye
 - utter_iamabot
+- utter_restaurants_pune
+- utter_restaurants_bangalore
+- utter_restaurants_mumbai
+- fetch_bangalore_restaurants
+- fetch_pune_restaurants
+- fetch_mumbai_restaurants

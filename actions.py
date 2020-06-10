@@ -13,15 +13,44 @@
 # from rasa_sdk.executor import CollectingDispatcher
 #
 #
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+class FetchMumbaiRestaurants(Action):
+
+    def name(self) -> Text:
+        return "fetch_mumbai_restaurants"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="Hello World!")
+
+        return []
+
+class FetchPuneRestaurants(Action):
+
+    def name(self) -> Text:
+        return "fetch_pune_restaurants"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="Hello World!")
+
+        return []
+
+class FetchBangaloreRestaurants(Action):
+
+    def name(self) -> Text:
+        return "fetch_bangalore_restaurants"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        conn = sqlite3.connect('hotel_conn.db')
+        data = conn.execute("SELECT * FROM HOTEL_INFO WHERE CITY = 'BANGALORE'")
+
+        dispatcher.utter_message(text=data)
+
+        return []
