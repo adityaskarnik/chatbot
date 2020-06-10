@@ -5,7 +5,10 @@ virtualenv venv
 ```
 Next, activate virtual environment
 ```
-source venv/bin/activate
+source venv/bin/activate # For Linux
+```
+```
+.\venv\Script\activate # For Windows
 ```
 Install rasa
 ```
