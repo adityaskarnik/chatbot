@@ -12,6 +12,9 @@ intents:
 - provide_mumbai_restaurants
 - provide_bangalore_restaurants
 - provide_pune_restaurants
+- request_restaurants_pune
+- request_restaurants_mumbai
+- request_restaurants_bangalore
 responses:
   utter_greet:
   - buttons:
@@ -46,9 +49,9 @@ responses:
   utter_did_that_help:
   - buttons:
     - payload: Yes
-      text: Yes
+      title: Yes
     - payload: No
-      text: No
+      title: No
     text: Did that help you?
   utter_happy:
   - text: Great, carry on!
@@ -58,7 +61,6 @@ responses:
   - text: I am a bot, powered by Rasa.
 actions:
 - utter_greet
-- utter_cheer_up
 - utter_did_that_help
 - utter_happy
 - utter_goodbye

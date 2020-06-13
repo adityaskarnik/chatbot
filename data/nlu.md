@@ -19,6 +19,7 @@
 - of course
 - that sounds good
 - correct
+- Yes
 
 ## intent:deny
 - no
@@ -60,13 +61,19 @@
 - Provide me Menu of Theobroma
 - Provide me Menu of Guru Kripa
 - Provide me Menu of Cafe Safar
-- Provide me the Restaurants in Mumbai
 
 ## intent:provide_pune_restaurants
 - Provide me Menu of Le Plaisir
-- Provide me the Restaurants in Pune
 
 ## intent:provide_bangalore_restaurants
 - Provide me Menu of EAT.FIT
 - Provide me Menu of NANDHINI DELUX
+
+## intent:request_restaurants_pune
+- Provide me the Restaurants in Pune
+
+## intent:request_restaurants_mumbai
+- Provide me the Restaurants in Mumbai
+
+## intent:request_restaurants_bangalore
 - Provide me the Restaurants in Bangalore

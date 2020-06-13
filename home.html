@@ -1,13 +1,15 @@
 <html>
     <head>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-
+        <script type="text/javascript" src="assets/jquery-1.10.0.min.js"></script>
         <title>
             Yelp for Help - ChatBot
         </title>
-        <link rel="stylesheet" href="Chatroom.css" />
+        <link rel="stylesheet" href="assets/Chatroom.css" />
         <style>
+            @font-face {
+                font-family: "Ubuntu";
+                src: url("assets/Ubuntu-Regular.ttf");
+            }
             .chat-container {
                 font-family: 'Ubuntu', sans-serif;
                 width: 370px;
@@ -21,9 +23,9 @@
     <body>
         <div class="chat-container"></div>
 
-        <script src="Chatroom.js"/></script>
+        <script src="assets/Chatroom.js"/></script>
         <script type="text/javascript">
-            var chatroom = window.Chatroom({
+            var chatroom = new window.Chatroom({
                 host: "http://localhost:5021",
                 title: "Chat with Paw",
                 fontFamily: 'Ubuntu',
@@ -33,10 +35,8 @@
                 height: "50px",
                 fontSize: "10px"
             });
-            console.log(chatroom);
             $(document).ready(function() {
                 setTimeout(function(){
-                    console.log(chatroom);
                     chatroom.openChat();
                 }, 1000);
                 document.getElementById("input_text").value = "Hi";

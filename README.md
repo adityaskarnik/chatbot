@@ -1,3 +1,6 @@
+![](assets/demo.gif)
+
+
 ### Installation
 First setup virtual environment
 ```
