@@ -26,10 +26,10 @@ class FetchMumbaiRestaurants(Action):
                 restaurant = str((tracker.latest_message)['text']).split("Provide me Menu of")[1].strip()
                 import sqlite3
                 conn = sqlite3.connect('hotel_conn.db')
-                data = conn.execute("SELECT FOOD_ITEM, PRICE FROM HOTEL_INFO WHERE RESTAURANTS='" + restaurant +"'")
+                data = conn.execute("SELECT FOOD_ITEM, PRICE, IMAGE FROM HOTEL_INFO WHERE RESTAURANTS='" + restaurant +"'")
                 print("DATA",data, type(data))
                 for i in data:
-                    dispatcher.utter_message(text=str(i))
+                    dispatcher.utter_message(text=str(i[0] + "," + i[1]), image=i[2])
             except Exception as e:
                 print("Exception: ", e)
 
@@ -47,10 +47,10 @@ class FetchPuneRestaurants(Action):
             restaurant = str((tracker.latest_message)['text']).split("Provide me Menu of")[1].strip()
             import sqlite3
             conn = sqlite3.connect('hotel_conn.db')
-            data = conn.execute("SELECT FOOD_ITEM, PRICE FROM HOTEL_INFO WHERE RESTAURANTS='" + restaurant +"'")
+            data = conn.execute("SELECT FOOD_ITEM, PRICE, IMAGE FROM HOTEL_INFO WHERE RESTAURANTS='" + restaurant +"'")
             print("DATA",data, type(data))
             for i in data:
-                dispatcher.utter_message(text=str(i))
+                dispatcher.utter_message(text=str(i[0] + "," + i[1]), image=i[2])
 
             return []
 
@@ -65,9 +65,9 @@ class FetchBangaloreRestaurants(Action):
             restaurant = str((tracker.latest_message)['text']).split("Provide me Menu of")[1].strip()
             import sqlite3
             conn = sqlite3.connect('hotel_conn.db')
-            data = conn.execute("SELECT FOOD_ITEM, PRICE FROM HOTEL_INFO WHERE RESTAURANTS='" + restaurant +"'")
+            data = conn.execute("SELECT FOOD_ITEM, PRICE, IMAGE FROM HOTEL_INFO WHERE RESTAURANTS='" + restaurant +"'")
             print("DATA",data, type(data))
             for i in data:
-                dispatcher.utter_message(text=str(i))
+                dispatcher.utter_message(text=str(i[0] + "," + i[1]), image=i[2])
 
             return []
