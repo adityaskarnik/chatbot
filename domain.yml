@@ -71,3 +71,4 @@ actions:
 - fetch_bangalore_restaurants
 - fetch_pune_restaurants
 - fetch_mumbai_restaurants
+- utter_cheer_up
